@@ -1,0 +1,19 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int count=0;
+        String s=sc.next();
+        int i=sc.nextInt();
+        char ch=sc.next().charAt(0);
+        for(int z=0;z<i;z++)
+        {
+            if(s.charAt(z)==ch)
+            {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
