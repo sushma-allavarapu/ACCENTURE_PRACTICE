@@ -1,0 +1,16 @@
+ip:5
+op:3.14*5*5==78
+
+
+import java.util.*;
+class main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        double y=3.14*n*n;
+        int d=(int)y;
+        System.out.println(d);
+    }
+}
