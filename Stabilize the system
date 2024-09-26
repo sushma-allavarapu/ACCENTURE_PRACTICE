@@ -1,0 +1,12 @@
+//ip:100034
+op:155534
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        String res=String.valueOf(n).replace("0","5");
+        System.out.println(Integer.parseInt(res));
+    }
+}
