@@ -1,0 +1,14 @@
+ip:allavarapu
+sushma
+op:allavarapu SUSHMA
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String a=sc.nextLine();
+        String b=sc.nextLine();
+        String z=a.toLowerCase()+" "+b.toUpperCase();
+        System.out.println(z);
+    }
+}
