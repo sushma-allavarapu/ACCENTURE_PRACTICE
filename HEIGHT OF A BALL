@@ -1,0 +1,20 @@
+ip:10
+  20
+  5
+op:160
+
+import java.util.*;
+import java.lang.*;
+class main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int inp1=sc.nextInt();
+        int inp2=sc.nextInt();
+        int inp3=sc.nextInt();
+        int e=inp2/inp3;
+        int res=inp1*(int)Math.pow(e,2);
+        System.out.println(res);
+        
+    }
+}
