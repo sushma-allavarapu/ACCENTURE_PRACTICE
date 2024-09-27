@@ -1,0 +1,29 @@
+ip:10
+  5
+  10
+op:5
+
+
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();//each box contains how many sweets
+        int e=sc.nextInt();//sweets required daily
+        int d=sc.nextInt();//no of days to survive
+        int buy=d-d/7;
+        int req=e*d;
+        int max=n*buy;
+        if(req>max)
+        {
+            System.out.println("-1");
+        }
+        int boxes=req/n;
+        if(req%n!=0)
+        {
+            boxes++;
+        }
+        System.out.println(boxes);
+    }
+}
