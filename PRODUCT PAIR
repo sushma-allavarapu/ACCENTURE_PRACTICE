@@ -1,0 +1,30 @@
+ip:7
+  8 9 10 11 12 3 6
+op:18
+
+import java.util.*;
+class main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        Set<String> unique=new HashSet<>();
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if(arr[i]%3==0||arr[j]%3==0)
+                {
+                    String pair=Math.min(arr[i],arr[j])+" "+Math.max(arr[i],arr[j]);
+                    unique.add(pair);
+                }
+            }
+        }
+        System.out.println(unique.size());
+    }
+}
