@@ -4,7 +4,7 @@ class Main{
     {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
-        int res=fibo(n);
+        int res=fibo(n)%47;
         System.out.println(res);
     }
     public static int fibo(int n)
