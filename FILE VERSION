@@ -1,0 +1,43 @@
+ip:2
+File_1
+File_2
+op:2
+
+import java.util.*;
+import java.util.regex.*;
+class main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        sc.nextLine();
+        String []arr=new String[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextLine();
+        }
+        if(n==0)
+        {
+            System.out.println("-1");
+            return;
+        }
+        int max=-1;
+        String regex="^File_(\\d+)$";
+        Pattern pt=Pattern.compile(regex);
+        for(int i=0;i<n;i++)
+        {
+            String file=arr[i];
+            Matcher mat=pt.matcher(file);
+            if(mat.matches())
+            {
+                int version=Integer.parseInt(mat.group(1));
+                if(version>max)
+                {
+                    max=version;
+                }
+            }
+        }
+        
+        System.out.println(max);
+    }
+}
