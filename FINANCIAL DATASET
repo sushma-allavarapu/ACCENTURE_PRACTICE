@@ -1,5 +1,6 @@
 ip:7
-op:7 6 5 4 3 2 1
+7 6 5 4 3 2 1
+op:6
 
 import java.util.*;
 class Main{
