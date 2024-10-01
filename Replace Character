@@ -1,0 +1,34 @@
+ip:apple
+  a
+  p
+op:paale
+
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.next();
+        char c1=sc.next().charAt(0);
+        char c2=sc.next().charAt(0);
+        
+        System.out.println(replace(s1,c1,c2));
+    }
+    public static String replace(String s,char c1,char c2)
+    {
+        char[] result=s.toCharArray();
+        int n=result.length;
+        for(int i=0;i<n;i++)
+        {
+            if(result[i]==c1)
+            {
+                result[i]=c2;
+            }
+            else if(result[i]==c2)
+            {
+                result[i]=c1;
+            }
+        }
+        return new String(result);
+    }
+}
