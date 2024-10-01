@@ -1,0 +1,67 @@
+ip:000011
+  110000
+op:000000
+  110011
+  110011
+
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.next();
+        String s2=sc.next();
+        
+        System.out.println(binaryand(s1,s2));
+        System.out.println(binaryor(s1,s2));
+        System.out.println(binaryxor(s1,s2));
+    }
+    public static String binaryand(String s1,String s2)
+    {
+        StringBuilder res=new StringBuilder();
+        for(int i=0;i<s1.length();i++)
+        {
+            if(s1.charAt(i)=='0' || s2.charAt(i)=='0')
+            {
+                res.append('0');
+            }
+            else
+            {
+                res.append('1');
+            }
+        }
+        return res.toString();
+    }
+    public static String binaryor(String s1,String s2)
+    {
+        StringBuilder res=new StringBuilder();
+        for(int i=0;i<s1.length();i++)
+        {
+            if(s1.charAt(i)=='1' || s2.charAt(i)=='1')
+            {
+                res.append('1');
+            }
+            else
+            {
+                res.append('0');
+            }
+        }
+        return res.toString();
+    }
+    public static String binaryxor(String s1,String s2)
+    {
+        StringBuilder res=new StringBuilder();
+        for(int i=0;i<s1.length();i++)
+        {
+            if(s1.charAt(i)==s2.charAt(i))
+            {
+                res.append('0');
+            }
+            else
+            {
+                res.append('1');
+            }
+        }
+        return res.toString();
+    }
+}
