@@ -1,3 +1,7 @@
+ip:sushma
+    3
+    s
+op:2
 import java.util.*;
 class Main{
     public static void main(String[] args)
