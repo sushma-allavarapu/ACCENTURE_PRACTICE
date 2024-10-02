@@ -1,0 +1,52 @@
+ip:1 2 4
+op:421 
+
+//using strings
+
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        String nstr=" ";
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)!=' ')
+            {
+                nstr+=str.charAt(i);
+            }
+        }
+        char[] arr=nstr.toCharArray();
+        Arrays.sort(arr);
+        for(int i=arr.length-1;i>=0;i--)
+        {
+            System.out.print(arr[i]);
+        }
+    }
+}
+
+
+
+//using digits
+ip:4
+  1 4 2 6
+op:6421
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] digits = new int[n];
+        for (int i = 0; i < n; i++) {
+            digits[i] = sc.nextInt();
+        }
+        Arrays.sort(digits);
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.print(digits[i]);
+        }
+        
+        System.out.println();
+    }
+}
