@@ -1,0 +1,25 @@
+ip:5
+  22 11 44 66 33
+op:44
+
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        ArrayList<Integer> li=new ArrayList<>();
+        for(int num:a)
+        {
+            li.add(num);
+        }
+        Collections.sort(li);
+        System.out.println(li.get(li.size()-2));
+        
+    }
+}
