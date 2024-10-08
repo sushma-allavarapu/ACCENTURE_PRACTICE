@@ -1,0 +1,26 @@
+ip:1011
+op:255
+
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        ArrayList<Integer>a=new ArrayList<>();
+        int n=sc.nextInt();
+        String b=Integer.toBinaryString(n);
+        for(int i=0;i<b.length();i++)
+        {
+            a.add(b.charAt(i)-'0');
+        }
+        Collections.sort(a);
+        StringBuilder st=new StringBuilder();
+        for(int num:a)
+        {
+            st.append(num);
+        }
+        int minNumber = Integer.parseInt(st.toString(), 2);
+        System.out.println(minNumber);
+        
+    }
+}
