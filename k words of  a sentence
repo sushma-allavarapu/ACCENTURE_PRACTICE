@@ -1,0 +1,24 @@
+ip:the brown fox
+    2
+op:the brown 
+
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String st=sc.nextLine();
+        int k=sc.nextInt();
+        String[] words=st.split("\\s+");
+        StringBuilder res=new StringBuilder();
+        for(int i=0;i<Math.min(st.length(),k);i++)
+        {
+            res.append(words[i]);
+            if(i<k-1 && i<words.length-1)//to append space
+            {
+                res.append(" ");
+            }
+        }
+        System.out.println(res.toString());
+    }
+}
