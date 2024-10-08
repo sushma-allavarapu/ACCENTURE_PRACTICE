@@ -1,0 +1,29 @@
+Problem Statement:
+In a mystical land, there is a row of stones, each colored red, green, or blue. To ensure that no two adjacent stones share the same color, the inhabitants want to minimize the number of stones that need to be removed. If a stone has no other stone adjacent to it, it is considered to be adjacent to an empty space.
+Sample Input:
+3
+RRG
+Sample Output:
+1
+here there are two reds consecutive so remove 1 red stone
+
+program:
+
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        String str=sc.next();
+        int remove=0;
+        for(int i=0;i<n-1;i++)
+        {
+            if(str.charAt(i)==str.charAt(i+1))
+            {
+                remove++;
+            }
+        }
+        System.out.println(remove);
+    }
+}
