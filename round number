@@ -1,0 +1,38 @@
+ip:19
+op:1(19→(1^2+9^2=82);82→68;68→100;100→1)
+import java.util.*;
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(round(n));
+    }
+    public static int round(int n){
+        Set<Integer> seen=new HashSet<>();
+        while(n!=1)
+        {
+            if(seen.contains(n))
+            {
+                return 0;
+            }
+            else{
+                seen.add(n);
+                n=sumofsquare(n);
+            }
+        }
+        return 1;
+    }
+        public static int sumofsquare(int n)
+        {
+            int sum=0;
+            while(n>0)
+            {
+                int rem=n%10;
+                sum=sum+rem*rem;
+                n=n/10;
+            }
+            return sum;
+        }
+        
+}
