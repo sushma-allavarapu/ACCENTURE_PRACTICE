@@ -21,7 +21,7 @@ class Main{
             {
                 if(a[j]>a[max_index])
                 {
-                    max_index=i;
+                    max_index=j;
                 }
             }
             int temp=a[max_index];
